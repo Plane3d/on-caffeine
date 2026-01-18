@@ -15,7 +15,15 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
     public static final Block MUG_EMPTY = registerBlock("mug_empty", new Block (FabricBlockSettings.copyOf(Blocks.DECORATED_POT)));
-    public static final Block MUG_COFFEE = registerBeverageBlock("mug_coffee", new BeverageBlock(FabricBlockSettings.copyOf(Blocks.DECORATED_POT).nonOpaque()), ModFoodComponents.COFFEE_MEDIUM);
+    public static final Block MUG_COFFEE = registerBeverageBlock("mug_coffee",
+            new BeverageBlock(FabricBlockSettings.copyOf(Blocks.DECORATED_POT).nonOpaque()), ModFoodComponents.COFFEE_MEDIUM);
+    public static final Block MUG_GREEN_TEA = registerBeverageBlock("mug_green_tea",
+            new BeverageBlock(FabricBlockSettings.copyOf(Blocks.DECORATED_POT).nonOpaque()), ModFoodComponents.GREEN_MEDIUM);
+    public static final Block MUG_BLACK_TEA = registerBeverageBlock("mug_black_tea",
+            new BeverageBlock(FabricBlockSettings.copyOf(Blocks.DECORATED_POT).nonOpaque()), ModFoodComponents.BLACK_MEDIUM);
+    public static final Block MUG_HERBAL_TEA = registerBeverageBlock("mug_herbal_tea",
+            new BeverageBlock(FabricBlockSettings.copyOf(Blocks.DECORATED_POT).nonOpaque()), ModFoodComponents.HERBAL_MEDIUM);
+
 
     public static Block registerBlock(String name, Block block){
         registerBlockItem(name,block);

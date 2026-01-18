@@ -15,6 +15,9 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.oncaffeine")).icon(() -> new ItemStack(ModBlocks.MUG_EMPTY)).entries((displayContext, entries) -> {
         entries.add(ModBlocks.MUG_EMPTY);
         entries.add(ModBlocks.MUG_COFFEE);
+        entries.add(ModBlocks.MUG_BLACK_TEA);
+        entries.add(ModBlocks.MUG_HERBAL_TEA);
+        entries.add(ModBlocks.MUG_GREEN_TEA);
 
     }).build());
     public static void registerItemGroups(){

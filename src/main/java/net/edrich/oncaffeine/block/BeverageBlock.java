@@ -12,10 +12,11 @@ public class BeverageBlock extends Block {
     public BeverageBlock(Settings settings) {
         super(settings);
     }
-
+    /*
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context){
-        return VoxelShapes.cuboid(5.0f,0.0f,5.0f,11.0f,5.0f,11.0f);
+        return VoxelShapes.cuboid(5.0,0.0,5.0,11.0,5.0,11.0);
     }
+     */
 
 }

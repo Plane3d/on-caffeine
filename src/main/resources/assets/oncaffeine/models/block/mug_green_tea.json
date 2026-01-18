@@ -1,10 +1,9 @@
 {
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
-	"parent": "Mugs",
 	"textures": {
-		"0": "blocks:mug_green_tea",
-		"particle": "blocks:mug_green_tea"
+		"0": "oncaffeine:block/mug_green_tea",
+		"particle": "oncaffeine:block/mug_green_tea"
 	},
 	"elements": [
 		{
