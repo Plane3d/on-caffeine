@@ -14,7 +14,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
-    public static final Block MUG_EMPTY = registerBlock("mug_empty", new Block (FabricBlockSettings.copyOf(Blocks.DECORATED_POT)));
+    public static final Block MUG_EMPTY = registerBlock("mug_empty", new BeverageBlock (FabricBlockSettings.copyOf(Blocks.DECORATED_POT).nonOpaque()));
     public static final Block MUG_COFFEE = registerBeverageBlock("mug_coffee",
             new BeverageBlock(FabricBlockSettings.copyOf(Blocks.DECORATED_POT).nonOpaque()), ModFoodComponents.COFFEE_MEDIUM);
     public static final Block MUG_GREEN_TEA = registerBeverageBlock("mug_green_tea",

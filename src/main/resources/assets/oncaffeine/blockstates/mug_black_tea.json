@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "oncaffeine:block/mug_coffee"
+      "model": "oncaffeine:block/mug_black_tea"
     }
   }
 }
