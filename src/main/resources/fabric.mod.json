@@ -3,15 +3,15 @@
 	"id": "oncaffeine",
 	"version": "${version}",
 	"name": "On Caffeine",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Bringing caffeinated drinks of all types and temperatures!",
 	"authors": [
-		"Me!"
+		"Edric Horning/Plane3d"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/oncaffeine/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -20,13 +20,17 @@
 		],
 		"fabric-datagen": [
 			"net.edrich.oncaffeine.OnCaffeineDataGenerator"
-		]
+		],
+        "client": [
+            "net.edrich.oncaffeine.OnCaffeineClient"
+        ]
+
 	},
 	"mixins": [
 		"oncaffeine.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.18.4",
+		"fabricloader": ">=0.17.0",
 		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*"
