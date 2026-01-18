@@ -12,8 +12,9 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
     public static final ItemGroup COFFEE_GROUP = Registry.register(Registries.ITEM_GROUP, new Identifier(OnCaffeine.MOD_ID, "coffee"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.oncaffine")).icon(() -> new ItemStack(ModBlocks.MUG_EMPTY)).entries((displayContext, entries) -> {
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.oncaffeine")).icon(() -> new ItemStack(ModBlocks.MUG_EMPTY)).entries((displayContext, entries) -> {
         entries.add(ModBlocks.MUG_EMPTY);
+        entries.add(ModBlocks.MUG_COFFEE);
 
     }).build());
     public static void registerItemGroups(){
