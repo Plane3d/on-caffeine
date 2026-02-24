@@ -1,8 +1,12 @@
 package net.edrich.oncaffeine.datagen;
 
 import net.edrich.oncaffeine.block.ModBlocks;
+import net.edrich.oncaffeine.block.TeaCropBlock;
+import net.edrich.oncaffeine.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
+import net.minecraft.predicate.StatePredicate;
 
 public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
@@ -17,5 +21,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MUG_BLACK_TEA);
         addDrop(ModBlocks.MUG_GREEN_TEA);
         addDrop(ModBlocks.MUG_HERBAL_TEA);
+
+        BlockStatePropertyLootCondition.Builder builder = BlockStatePropertyLootCondition
+                .builder(ModBlocks.TEA_CROP)
+                .properties(StatePredicate.Builder.create()
+                .exactMatch(TeaCropBlock.AGE, 5));
+        addDrop(ModBlocks.TEA_CROP, cropDrops(ModBlocks.TEA_CROP, ModItems.TEA_LEAVES, ModItems.TEA_SEEDS, builder));
     }
 }

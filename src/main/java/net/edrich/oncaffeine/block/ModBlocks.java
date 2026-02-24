@@ -24,6 +24,9 @@ public class ModBlocks {
     public static final Block MUG_HERBAL_TEA = registerBeverageBlock("mug_herbal_tea",
             new BeverageBlock(FabricBlockSettings.copyOf(Blocks.DECORATED_POT).nonOpaque()), ModFoodComponents.HERBAL_MEDIUM);
 
+    public static final Block TEA_CROP = Registry.register(Registries.BLOCK, new Identifier(OnCaffeine.MOD_ID, "tea_crop"),
+            new TeaCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
 
     public static Block registerBlock(String name, Block block){
         registerBlockItem(name,block);
@@ -38,10 +41,11 @@ public class ModBlocks {
         registerBeverageItem(name,block,foodComponent);
         return Registry.register(Registries.BLOCK, new Identifier(OnCaffeine.MOD_ID, name), block);
     }
-    private static Item registerBeverageItem(String name, Block block, FoodComponent foodComponent){
+    private static Item registerBeverageItem(String name, Block block, FoodComponent foodComponent) {
         return Registry.register(Registries.ITEM, new Identifier(OnCaffeine.MOD_ID, name),
                 new BeverageBlockItem(block, new FabricItemSettings().food(foodComponent).maxCount(1)));
     }
+
     public static void registerModBlocks(){
         OnCaffeine.LOGGER.info("Registering Mod Blocks for " + OnCaffeine.MOD_ID);
     }
