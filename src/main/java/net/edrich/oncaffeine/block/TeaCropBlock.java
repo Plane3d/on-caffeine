@@ -14,16 +14,19 @@ public class TeaCropBlock extends CropBlock {
     public static final IntProperty AGE = Properties.AGE_5;
 
     public TeaCropBlock(Settings settings) {
+
         super(settings);
     }
 
     @Override
     protected ItemConvertible getSeedsItem(){
+
         return ModItems.TEA_SEEDS;
     }
 
     @Override
     protected IntProperty getAgeProperty(){
+
         return AGE;
     }
 

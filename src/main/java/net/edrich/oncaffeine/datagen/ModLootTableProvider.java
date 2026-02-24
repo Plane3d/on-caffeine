@@ -27,5 +27,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                 .properties(StatePredicate.Builder.create()
                 .exactMatch(TeaCropBlock.AGE, 5));
         addDrop(ModBlocks.TEA_CROP, cropDrops(ModBlocks.TEA_CROP, ModItems.TEA_LEAVES, ModItems.TEA_SEEDS, builder));
+        /* change tea crop generated to lower prob for seed and raise for leave */
     }
 }

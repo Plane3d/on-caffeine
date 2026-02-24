@@ -19,6 +19,9 @@ public class ModItemGroups {
         entries.add(ModBlocks.MUG_HERBAL_TEA);
         entries.add(ModBlocks.MUG_GREEN_TEA);
 
+        entries.add(ModItems.TEA_SEEDS);
+        entries.add(ModItems.TEA_LEAVES);
+
     }).build());
     public static void registerItemGroups(){
         OnCaffeine.LOGGER.info("Registering Item Groups for" + OnCaffeine.MOD_ID);

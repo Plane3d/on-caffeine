@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "oncaffeine:block/tea_crop_stage5"
+  }
+}
