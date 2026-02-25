@@ -7,5 +7,9 @@
   "itemgroup.oncaffeine": "On Caffeine",
   "item.oncaffeine.tea_seeds": "Tea Seeds",
   "item.oncaffeine.tea_leaves": "Tea Leaves",
-  "block.oncaffeine.tea_crop": "Tea Crop"
+  "block.oncaffeine.tea_crop": "Tea Crop",
+  "item.oncaffeine.coffee_fruit": "Coffee Fruit",
+  "block.oncaffeine.coffee_crop": "Coffee Crop"
+
+
 }

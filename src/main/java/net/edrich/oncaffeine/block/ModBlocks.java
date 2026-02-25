@@ -25,10 +25,10 @@ public class ModBlocks {
             new BeverageBlock(FabricBlockSettings.copyOf(Blocks.DECORATED_POT).nonOpaque()), ModFoodComponents.HERBAL_MEDIUM);
 
     public static final Block TEA_CROP = Registry.register(Registries.BLOCK, new Identifier(OnCaffeine.MOD_ID, "tea_crop"),
-            new TeaCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+            new TeaCropBlock(FabricBlockSettings.copyOf(Blocks.BEETROOTS)));
 
     public static final Block COFFEE_CROP = Registry.register(Registries.BLOCK, new Identifier(OnCaffeine.MOD_ID, "coffee_crop"),
-            new CoffeeCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+            new CoffeeCropBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)));
 
 
     public static Block registerBlock(String name, Block block){

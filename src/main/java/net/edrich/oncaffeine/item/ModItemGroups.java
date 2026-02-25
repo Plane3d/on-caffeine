@@ -22,6 +22,8 @@ public class ModItemGroups {
         entries.add(ModItems.TEA_SEEDS);
         entries.add(ModItems.TEA_LEAVES);
 
+        entries.add(ModItems.COFFEE_FRUIT);
+
     }).build());
     public static void registerItemGroups(){
         OnCaffeine.LOGGER.info("Registering Item Groups for" + OnCaffeine.MOD_ID);

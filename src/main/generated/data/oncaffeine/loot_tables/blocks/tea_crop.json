@@ -7,7 +7,7 @@
   ],
   "pools": [
     {
-      "bonus_rolls": 2.0,
+      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:alternatives",
@@ -54,7 +54,7 @@
               "formula": "minecraft:binomial_with_bonus_count",
               "function": "minecraft:apply_bonus",
               "parameters": {
-                "extra": 1,
+                "extra": 3,
                 "probability": 0.5714286
               }
             }
