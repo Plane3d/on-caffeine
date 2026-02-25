@@ -1,5 +1,6 @@
 package net.edrich.oncaffeine.block;
 
+import net.edrich.oncaffeine.item.ModItems;
 import net.minecraft.block.*;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.server.world.ServerWorld;
@@ -21,9 +22,9 @@ public class CoffeeCropBlock extends CropBlock {
             Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 4.0, 16.0),
             Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 6.0, 16.0),
             Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 8.0, 16.0),
-            Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 10.0, 16.0),
             Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 12.0, 16.0),
-            Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 14.0, 16.0),
+            Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0),
+            Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0),
             Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0),
             Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0)
 
@@ -42,7 +43,13 @@ public class CoffeeCropBlock extends CropBlock {
     }
 
     @Override
+    protected ItemConvertible getSeedsItem(){
+        return ModItems.COFFEE_FRUIT;
+    }
+
+    @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random){
+
         if (world.getBaseLightLevel(pos, 0) >= 9)
         {
             int currentAge = this.getAge(state);
@@ -66,6 +73,10 @@ public class CoffeeCropBlock extends CropBlock {
                 }
 
             }
+        }
+        if(world.getBlockState(pos.up(1)).isOf(ModBlocks.COFFEE_CROP) && world.getBlockState(pos.up(1)).get(AGE) <= 5){
+            //world.setBlockState(pos.up(1), Blocks.AIR.getDefaultState());
+            world.breakBlock(pos.up(1), true);
         }
     }
     @Override
@@ -92,7 +103,7 @@ public class CoffeeCropBlock extends CropBlock {
     {
         return super.canPlaceAt(state, world, pos)
                 || (world.getBlockState(pos.down(1)).isOf(this)
-                && world.getBlockState(pos.down(1)).get(AGE) == 7);
+                && world.getBlockState(pos.down(1)).get(AGE) >= 5);
     }
 
     @Override
