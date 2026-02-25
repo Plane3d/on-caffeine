@@ -27,6 +27,9 @@ public class ModBlocks {
     public static final Block TEA_CROP = Registry.register(Registries.BLOCK, new Identifier(OnCaffeine.MOD_ID, "tea_crop"),
             new TeaCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
 
+    public static final Block COFFEE_CROP = Registry.register(Registries.BLOCK, new Identifier(OnCaffeine.MOD_ID, "coffee_crop"),
+            new CoffeeCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
 
     public static Block registerBlock(String name, Block block){
         registerBlockItem(name,block);
