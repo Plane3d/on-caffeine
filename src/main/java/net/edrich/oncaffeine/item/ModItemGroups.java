@@ -18,11 +18,18 @@ public class ModItemGroups {
         entries.add(ModBlocks.MUG_BLACK_TEA);
         entries.add(ModBlocks.MUG_HERBAL_TEA);
         entries.add(ModBlocks.MUG_GREEN_TEA);
+        entries.add(ModBlocks.MUG_HOT_WATER);
 
         entries.add(ModItems.TEA_SEEDS);
         entries.add(ModItems.TEA_LEAVES);
 
         entries.add(ModItems.COFFEE_FRUIT);
+
+        entries.add(ModItems.BLACK_TEA_LEAVES);
+        entries.add(ModItems.GREEN_TEA_LEAVES);
+        entries.add(ModItems.BLENDED_HERBS);
+        entries.add(ModItems.RAW_COFFEE_BEANS);
+        entries.add(ModItems.COFFEE_BEANS);
 
     }).build());
     public static void registerItemGroups(){

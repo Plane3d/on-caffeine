@@ -4,12 +4,19 @@
   "block.oncaffeine.mug_green_tea": "Mug of Green Tea",
   "block.oncaffeine.mug_black_tea": "Mug of Black Tea",
   "block.oncaffeine.mug_herbal_tea": "Mug of Herbal Tea",
+  "block.oncaffeine.mug_hot_water": "Mug of Hot Water",
   "itemgroup.oncaffeine": "On Caffeine",
   "item.oncaffeine.tea_seeds": "Tea Seeds",
   "item.oncaffeine.tea_leaves": "Tea Leaves",
   "block.oncaffeine.tea_crop": "Tea Crop",
   "item.oncaffeine.coffee_fruit": "Coffee Fruit",
-  "block.oncaffeine.coffee_crop": "Coffee Crop"
+  "block.oncaffeine.coffee_crop": "Coffee Crop",
+  "item.oncaffeine.black_tea_leaves": "Black Tea Leaves",
+  "item.oncaffeine.green_tea_leaves": "Green Tea Leaves",
+  "item.oncaffeine.blended_herbs": "Blended Herbs",
+  "item.oncaffeine.raw_coffee_beans": "Raw Coffee Beans",
+  "item.oncaffeine.coffee_beans": "Coffee Beans"
+
 
 
 }

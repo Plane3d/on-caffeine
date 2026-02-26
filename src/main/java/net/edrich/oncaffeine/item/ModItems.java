@@ -20,7 +20,7 @@ public class ModItems {
     public static final Item COFFEE_BEANS = registerItem("coffee_beans", new BrewableItem(new FabricItemSettings()));
     public static final Item BLACK_TEA_LEAVES = registerItem("black_tea_leaves", new BrewableItem(new FabricItemSettings()));
     public static final Item GREEN_TEA_LEAVES = registerItem("green_tea_leaves", new BrewableItem(new FabricItemSettings()));
-    public static final Item BLENDED_HERBS = registerItem("blended_herbs", new Item(new FabricItemSettings()));
+    public static final Item BLENDED_HERBS = registerItem("blended_herbs", new BrewableItem(new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item){
 
