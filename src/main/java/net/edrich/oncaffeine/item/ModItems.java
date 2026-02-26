@@ -15,10 +15,17 @@ public class ModItems {
     public static final Item TEA_SEEDS = registerItem("tea_seeds", new AliasedBlockItem(ModBlocks.TEA_CROP, new FabricItemSettings()));
 
     public static final Item COFFEE_FRUIT = registerItem("coffee_fruit", new AliasedBlockItem(ModBlocks.COFFEE_CROP, new FabricItemSettings()));
+
+    public static final Item RAW_COFFEE_BEANS = registerItem("raw_coffee_beans", new Item(new FabricItemSettings()));
+    public static final Item COFFEE_BEANS = registerItem("coffee_beans", new BrewableItem(new FabricItemSettings()));
+    public static final Item BLACK_TEA_LEAVES = registerItem("black_tea_leaves", new BrewableItem(new FabricItemSettings()));
+    public static final Item GREEN_TEA_LEAVES = registerItem("green_tea_leaves", new BrewableItem(new FabricItemSettings()));
+
     private static Item registerItem(String name, Item item){
 
         return Registry.register(Registries.ITEM, new Identifier(OnCaffeine.MOD_ID, name), item);
     }
+
 
 
     public static void registerModItems(){
