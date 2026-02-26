@@ -1,6 +1,7 @@
 package net.edrich.oncaffeine.item;
 
 import net.edrich.oncaffeine.block.ModBlocks;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 
 import net.minecraft.entity.player.PlayerEntity;
@@ -33,26 +34,31 @@ public class BrewableItem extends Item {
         {
             if (context.getStack().isOf(ModItems.BLACK_TEA_LEAVES))
             {
-                context.getWorld().setBlockState(position, ModBlocks.MUG_BLACK_TEA.getDefaultState());
-                context.getWorld().playSound((PlayerEntity)null, position, SoundEvents.BLOCK_FIRE_EXTINGUISH,
-                        SoundCategory.BLOCKS, 1.0F,
-                        (1.0F + context.getWorld().getRandom().nextFloat() * 0.2F) * 0.7F);
-                context.getWorld().addParticle(ParticleTypes.ASH, position.getX(), position.getY(), position.getZ(),
-                        0.0, 0.0, 0.0);
+                convertCup(ModBlocks.MUG_BLACK_TEA.getDefaultState(), context, position);
             }
             else if (context.getStack().isOf(ModItems.GREEN_TEA_LEAVES))
             {
-                context.getWorld().setBlockState(position, ModBlocks.MUG_GREEN_TEA.getDefaultState());
-                context.getWorld().playSound((PlayerEntity)null, position, SoundEvents.BLOCK_FIRE_EXTINGUISH,
-                        SoundCategory.BLOCKS, 1.0F,
-                        (1.0F + context.getWorld().getRandom().nextFloat() * 0.2F) * 0.7F);
-                context.getWorld().addParticle(ParticleTypes.ASH, position.getX(), position.getY(), position.getZ(),
-                        0.0, 0.0, 0.0);
+                convertCup(ModBlocks.MUG_GREEN_TEA.getDefaultState(), context, position);
+            }
+            else if (context.getStack().isOf(ModItems.BLENDED_HERBS))
+            {
+                convertCup(ModBlocks.MUG_HERBAL_TEA.getDefaultState(), context, position);
             }
         }
 
         return ActionResult.PASS;
     }
+
+    private static void convertCup(BlockState blockState, ItemUsageContext context, BlockPos position)
+    {
+        context.getWorld().setBlockState(position, blockState);
+        context.getWorld().playSound((PlayerEntity)null, position, SoundEvents.BLOCK_FIRE_EXTINGUISH,
+                SoundCategory.BLOCKS, 1.0F,
+                (1.0F + context.getWorld().getRandom().nextFloat() * 0.2F) * 0.7F);
+        context.getWorld().addParticle(ParticleTypes.ASH, position.getX(), position.getY(), position.getZ(),
+                0.0, 0.0, 0.0);
+    }
+
 
     private boolean isHotWater(BlockState state)
     {
