@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "oncaffeine:mug_empty",
+    "oncaffeine:mug_coffee",
+    "oncaffeine:mug_black_tea",
+    "oncaffeine:mug_green_tea",
+    "oncaffeine:mug_herbal_tea",
+    "oncaffeine:mug_hot_water",
+    "minecraft:air"
+  ]
+}

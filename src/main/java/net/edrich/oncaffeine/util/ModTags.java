@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 public class ModTags {
     public static class Blocks
     {
+        public static final TagKey<Block> CUP_BLOCKS_UNPLACEABLE = createTag("cup_blocks_unplaceable");
 
         private static TagKey<Block> createTag(String name)
         {

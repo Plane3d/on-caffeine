@@ -14,7 +14,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
-    public static final Block MUG_EMPTY = registerBlock("mug_empty", new BeverageBlock (FabricBlockSettings.copyOf(Blocks.DECORATED_POT).nonOpaque()));
+    public static final Block MUG_EMPTY = registerBlock("mug_empty", new BeverageBlock(FabricBlockSettings.copyOf(Blocks.DECORATED_POT).nonOpaque()));
     public static final Block MUG_COFFEE = registerBeverageBlock("mug_coffee",
             new BeverageBlock(FabricBlockSettings.copyOf(Blocks.DECORATED_POT).nonOpaque()), ModFoodComponents.COFFEE_MEDIUM);
     public static final Block MUG_GREEN_TEA = registerBeverageBlock("mug_green_tea",
@@ -23,6 +23,8 @@ public class ModBlocks {
             new BeverageBlock(FabricBlockSettings.copyOf(Blocks.DECORATED_POT).nonOpaque()), ModFoodComponents.BLACK_MEDIUM);
     public static final Block MUG_HERBAL_TEA = registerBeverageBlock("mug_herbal_tea",
             new BeverageBlock(FabricBlockSettings.copyOf(Blocks.DECORATED_POT).nonOpaque()), ModFoodComponents.HERBAL_MEDIUM);
+    public static final Block MUG_HOT_WATER = registerBlock("mug_hot_water",
+            new BeverageBlock(FabricBlockSettings.copyOf(Blocks.DECORATED_POT).nonOpaque()));
 
     public static final Block TEA_CROP = Registry.register(Registries.BLOCK, new Identifier(OnCaffeine.MOD_ID, "tea_crop"),
             new TeaCropBlock(FabricBlockSettings.copyOf(Blocks.BEETROOTS)));
