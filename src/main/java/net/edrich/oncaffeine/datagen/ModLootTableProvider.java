@@ -23,6 +23,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MUG_BLACK_TEA);
         addDrop(ModBlocks.MUG_GREEN_TEA);
         addDrop(ModBlocks.MUG_HERBAL_TEA);
+        addDrop(ModBlocks.MUG_HOT_WATER);
 
         BlockStatePropertyLootCondition.Builder builderTea = BlockStatePropertyLootCondition
                 .builder(ModBlocks.TEA_CROP)

@@ -23,7 +23,6 @@ public class BrewableItem extends Item {
     public ActionResult useOnBlock(ItemUsageContext context)
     {
         BlockPos position = context.getBlockPos();
-        PlayerEntity player = context.getPlayer();
         BlockState state = context.getWorld().getBlockState(position);
 
         if (isHotWater(state))
@@ -51,8 +50,9 @@ public class BrewableItem extends Item {
         context.getWorld().playSound((PlayerEntity)null, position, SoundEvents.BLOCK_FIRE_EXTINGUISH,
                 SoundCategory.BLOCKS, 1.0F,
                 (1.0F + context.getWorld().getRandom().nextFloat() * 0.2F) * 0.7F);
-        context.getWorld().addParticle(ParticleTypes.ASH, position.getX(), position.getY(), position.getZ(),
-                0.0, 0.0, 0.0);
+        context.getWorld().addParticle(ParticleTypes.CLOUD, true, position.getX() + 0.5, position.getY() + 0.5, position.getZ() + 0.5,
+                0.0, 0.25, 0.0);
+        context.getPlayer().getStackInHand(context.getHand()).decrement(1);
     }
 
 
