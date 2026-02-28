@@ -28,9 +28,11 @@ public class ModBlocks {
 
     public static final Block TEA_CROP = Registry.register(Registries.BLOCK, new Identifier(OnCaffeine.MOD_ID, "tea_crop"),
             new TeaCropBlock(FabricBlockSettings.copyOf(Blocks.BEETROOTS)));
-
     public static final Block COFFEE_CROP = Registry.register(Registries.BLOCK, new Identifier(OnCaffeine.MOD_ID, "coffee_crop"),
             new CoffeeCropBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)));
+
+    public static final Block CLASSIC_COFFEE_MACHINE = registerBlock("classic_coffee_machine",
+            new ClassicCoffeeMachineBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
 
 
     public static Block registerBlock(String name, Block block){

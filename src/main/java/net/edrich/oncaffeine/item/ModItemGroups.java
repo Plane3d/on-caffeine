@@ -31,6 +31,8 @@ public class ModItemGroups {
         entries.add(ModItems.RAW_COFFEE_BEANS);
         entries.add(ModItems.COFFEE_BEANS);
 
+        entries.add(ModBlocks.CLASSIC_COFFEE_MACHINE);
+
     }).build());
     public static void registerItemGroups(){
         OnCaffeine.LOGGER.info("Registering Item Groups for" + OnCaffeine.MOD_ID);
