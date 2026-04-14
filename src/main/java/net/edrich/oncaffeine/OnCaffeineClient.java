@@ -19,6 +19,7 @@ public class OnCaffeineClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MUG_EMPTY, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TEA_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.COFFEE_CROP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CLASSIC_COFFEE_MACHINE, RenderLayer.getCutout());
 
         HandledScreens.register(ModScreenHandlers.COFFEE_SCREEN_HANDLER_SCREEN_HANDLER, ClassicCoffeeScreen::new);
     }

@@ -24,7 +24,7 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class ClassicCoffeeMachineBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
-    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
+    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(4, ItemStack.EMPTY);
 
     private static final int BEAN_SLOT = 0;
     private static final int WATER_SLOT = 1;
@@ -138,6 +138,7 @@ public class ClassicCoffeeMachineBlockEntity extends BlockEntity implements Exte
     {
         this.removeStack(BEAN_SLOT, 1);
         this.removeStack(WATER_SLOT, 1);
+        this.setStack(WATER_SLOT, Items.GLASS_BOTTLE.getDefaultStack());
         this.removeStack(MUG_SLOT, 1);
         ItemStack result = new ItemStack(ModBlocks.MUG_COFFEE);
 
@@ -158,7 +159,7 @@ public class ClassicCoffeeMachineBlockEntity extends BlockEntity implements Exte
     {
         ItemStack result = new ItemStack(ModBlocks.MUG_COFFEE);
         boolean hasBeans = getStack(BEAN_SLOT).getItem() == ModItems.COFFEE_BEANS;
-        boolean hasWater = getStack(WATER_SLOT).getItem() == Items.POTION.getDefaultStack().getItem();
+        boolean hasWater = true; //getStack(WATER_SLOT).getItem() == Items.POTION.getDefaultStack().getItem();
         boolean hasMug = getStack(MUG_SLOT).getItem() == ModBlocks.MUG_EMPTY.asItem();
 
         return hasMug && hasBeans && hasWater && canInsertAmountIntoOutputSlot(result) && canInsertAmountIntoOutputSlot(result.getItem());

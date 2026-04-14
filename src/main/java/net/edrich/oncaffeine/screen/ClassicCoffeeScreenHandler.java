@@ -32,9 +32,9 @@ public class ClassicCoffeeScreenHandler extends ScreenHandler {
         this.propertyDelegate = arrayPropertyDelegate;
         this.blockEntity = ((ClassicCoffeeMachineBlockEntity) blockEntity);
 
-        this.addSlot(new Slot(inventory, 0, 16, 16));
-        this.addSlot(new Slot(inventory, 1, 144, 16));
-        this.addSlot(new Slot(inventory, 2, 80, 9));
+        this.addSlot(new Slot(inventory, 0, 15, 9));
+        this.addSlot(new Slot(inventory, 1, 79, 9));
+        this.addSlot(new Slot(inventory, 2, 144, 9));
         this.addSlot(new Slot(inventory, 3, 80, 59));
 
         addPlayerInventory(playerInventory);

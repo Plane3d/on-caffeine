@@ -10,8 +10,13 @@ import net.minecraft.util.Identifier;
 
 public class ModBlockEntities {
     public static final BlockEntityType<ClassicCoffeeMachineBlockEntity> CLASSIC_COFFEE_MACHINE_BLOCK_ENTITY =
-            Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(OnCaffeine.MOD_ID, "classic_coffee_be"),
+            Registry.register(Registries.BLOCK_ENTITY_TYPE , new Identifier(OnCaffeine.MOD_ID, "classic_coffee_be"),
                     FabricBlockEntityTypeBuilder.create(ClassicCoffeeMachineBlockEntity::new,
                             ModBlocks.CLASSIC_COFFEE_MACHINE).build());
+
+    public static void registerBlockEntities()
+    {
+        OnCaffeine.LOGGER.info("Registering Block Entities for " + OnCaffeine.MOD_ID);
+    }
 
 }

@@ -13,4 +13,10 @@ public class ModScreenHandlers {
                     new ExtendedScreenHandlerType<>(ClassicCoffeeScreenHandler::new));
 
 
+    public static void registerScreenHandler()
+    {
+        OnCaffeine.LOGGER.info("Registering Screen Handlers for " + OnCaffeine.MOD_ID);
+    }
+
+
 }
