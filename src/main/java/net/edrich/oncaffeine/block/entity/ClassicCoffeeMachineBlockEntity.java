@@ -1,5 +1,6 @@
 package net.edrich.oncaffeine.block.entity;
 
+import net.edrich.oncaffeine.OnCaffeine;
 import net.edrich.oncaffeine.block.ModBlocks;
 import net.edrich.oncaffeine.item.ModItems;
 import net.edrich.oncaffeine.screen.ClassicCoffeeScreenHandler;
@@ -33,7 +34,7 @@ public class ClassicCoffeeMachineBlockEntity extends BlockEntity implements Exte
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
-    private int maxProgress = 72;
+    private int maxProgress = 288;
 
     public ClassicCoffeeMachineBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.CLASSIC_COFFEE_MACHINE_BLOCK_ENTITY, pos, state);
@@ -116,10 +117,6 @@ public class ClassicCoffeeMachineBlockEntity extends BlockEntity implements Exte
                     this.craftItem();
                     this.resetProgress();
                 }
-                else
-                {
-                    this.resetProgress();
-                }
             }
         }
         else
@@ -159,7 +156,7 @@ public class ClassicCoffeeMachineBlockEntity extends BlockEntity implements Exte
     {
         ItemStack result = new ItemStack(ModBlocks.MUG_COFFEE);
         boolean hasBeans = getStack(BEAN_SLOT).getItem() == ModItems.COFFEE_BEANS;
-        boolean hasWater = true; //getStack(WATER_SLOT).getItem() == Items.POTION.getDefaultStack().getItem();
+        boolean hasWater = getStack(WATER_SLOT).getItem() == Items.POTION.getDefaultStack().getItem();
         boolean hasMug = getStack(MUG_SLOT).getItem() == ModBlocks.MUG_EMPTY.asItem();
 
         return hasMug && hasBeans && hasWater && canInsertAmountIntoOutputSlot(result) && canInsertAmountIntoOutputSlot(result.getItem());

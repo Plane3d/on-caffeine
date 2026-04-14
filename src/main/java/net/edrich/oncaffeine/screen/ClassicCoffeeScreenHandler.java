@@ -35,7 +35,7 @@ public class ClassicCoffeeScreenHandler extends ScreenHandler {
         this.addSlot(new Slot(inventory, 0, 15, 9));
         this.addSlot(new Slot(inventory, 1, 79, 9));
         this.addSlot(new Slot(inventory, 2, 144, 9));
-        this.addSlot(new Slot(inventory, 3, 80, 59));
+        this.addSlot(new Slot(inventory, 3, 79, 59));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);

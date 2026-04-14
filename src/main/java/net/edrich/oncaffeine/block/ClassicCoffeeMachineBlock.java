@@ -27,7 +27,7 @@ public class ClassicCoffeeMachineBlock extends BlockWithEntity implements BlockE
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return Block.createCuboidShape(0, 0, 0, 16, 12, 16);
+        return Block.createCuboidShape(1, 0, 1, 15, 12, 15);
     }
 
     @Override
