@@ -75,7 +75,6 @@ public class CoffeeCropBlock extends CropBlock {
             }
         }
         if(world.getBlockState(pos.up(1)).isOf(ModBlocks.COFFEE_CROP) && world.getBlockState(pos.up(1)).get(AGE) <= 5){
-            //world.setBlockState(pos.up(1), Blocks.AIR.getDefaultState());
             world.breakBlock(pos.up(1), true);
         }
     }

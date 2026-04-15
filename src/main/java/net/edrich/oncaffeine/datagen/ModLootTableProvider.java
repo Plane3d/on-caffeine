@@ -24,13 +24,14 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MUG_GREEN_TEA);
         addDrop(ModBlocks.MUG_HERBAL_TEA);
         addDrop(ModBlocks.MUG_HOT_WATER);
+        addDrop(ModBlocks.WILD_COFFEE, ModItems.COFFEE_FRUIT);
 
         BlockStatePropertyLootCondition.Builder builderTea = BlockStatePropertyLootCondition
                 .builder(ModBlocks.TEA_CROP)
                 .properties(StatePredicate.Builder.create()
                 .exactMatch(TeaCropBlock.AGE, 5));
         addDrop(ModBlocks.TEA_CROP, cropDrops(ModBlocks.TEA_CROP, ModItems.TEA_LEAVES, ModItems.TEA_SEEDS, builderTea));
-        /* change tea crop generated to lower prob for seed and raise for leave */
+
 
         AnyOfLootCondition.Builder builderCoffee = BlockStatePropertyLootCondition.builder(ModBlocks.COFFEE_CROP).properties(StatePredicate.Builder.create()
                         .exactMatch(CoffeeCropBlock.AGE, 7))

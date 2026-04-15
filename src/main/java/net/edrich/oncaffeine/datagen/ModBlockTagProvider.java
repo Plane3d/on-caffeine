@@ -30,5 +30,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MUG_HERBAL_TEA)
                 .add(ModBlocks.MUG_HOT_WATER)
                 .add(Blocks.AIR);
+
+        getOrCreateTagBuilder(ModTags.Blocks.CAFFEINE_FOLIAGE)
+                .add(ModBlocks.WILD_COFFEE)
+                .add(Blocks.AIR);
     }
 }
