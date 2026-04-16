@@ -25,6 +25,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MUG_HERBAL_TEA);
         addDrop(ModBlocks.MUG_HOT_WATER);
         addDrop(ModBlocks.WILD_COFFEE, ModItems.COFFEE_FRUIT);
+        addDrop(ModBlocks.WILD_TEA, ModItems.TEA_SEEDS);
+        addDrop(ModBlocks.CLASSIC_COFFEE_MACHINE);
 
         BlockStatePropertyLootCondition.Builder builderTea = BlockStatePropertyLootCondition
                 .builder(ModBlocks.TEA_CROP)
@@ -38,5 +40,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                 .or(BlockStatePropertyLootCondition.builder(ModBlocks.COFFEE_CROP).properties(StatePredicate.Builder.create()
                         .exactMatch(CoffeeCropBlock.AGE,8)));
         addDrop(ModBlocks.COFFEE_CROP, cropDrops(ModBlocks.COFFEE_CROP, ModItems.COFFEE_FRUIT, ModItems.COFFEE_FRUIT, builderCoffee));
+
+
     }
 }

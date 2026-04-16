@@ -33,6 +33,8 @@ public class ModBlocks {
 
     public static final Block WILD_COFFEE = registerBlock("wild_coffee",
             new FoliageBlock(FabricBlockSettings.copyOf(Blocks.GRASS)));
+    public static final Block WILD_TEA = registerBlock("wild_tea",
+            new FoliageBlock(FabricBlockSettings.copyOf(Blocks.GRASS)));
 
     public static final Block CLASSIC_COFFEE_MACHINE = registerBlock("classic_coffee_machine",
             new ClassicCoffeeMachineBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));

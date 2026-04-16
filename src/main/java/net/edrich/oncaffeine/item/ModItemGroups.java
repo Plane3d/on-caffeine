@@ -31,6 +31,9 @@ public class ModItemGroups {
         entries.add(ModItems.RAW_COFFEE_BEANS);
         entries.add(ModItems.COFFEE_BEANS);
 
+        entries.add(ModBlocks.WILD_COFFEE);
+        entries.add(ModBlocks.WILD_TEA);
+
         entries.add(ModBlocks.CLASSIC_COFFEE_MACHINE);
 
     }).build());
