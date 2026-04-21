@@ -14,6 +14,8 @@
 
   "block.oncaffeine.classic_coffee_machine": "Classic Coffee Machine",
   "blockentity.oncaffeine.classic_coffee_entity": "Classic Coffee Machine",
+  "block.oncaffeine.classic_tea_kettle": "Classic Tea Kettle",
+  "blockentity.oncaffeine.classic_tea_entity": "Classic Tea Kettle",
 
   "itemgroup.oncaffeine": "On Caffeine",
 

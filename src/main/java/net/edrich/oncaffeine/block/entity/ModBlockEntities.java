@@ -13,6 +13,10 @@ public class ModBlockEntities {
             Registry.register(Registries.BLOCK_ENTITY_TYPE , new Identifier(OnCaffeine.MOD_ID, "classic_coffee_be"),
                     FabricBlockEntityTypeBuilder.create(ClassicCoffeeMachineBlockEntity::new,
                             ModBlocks.CLASSIC_COFFEE_MACHINE).build());
+    public static final BlockEntityType<ClassicTeaKettleBlockEntity> CLASSIC_TEA_KETTLE_BLOCK_ENTITY =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(OnCaffeine.MOD_ID, "classic_tea_be"),
+                    FabricBlockEntityTypeBuilder.create(ClassicTeaKettleBlockEntity::new,
+                            ModBlocks.CLASSIC_TEA_KETTLE).build());
 
     public static void registerBlockEntities()
     {

@@ -11,6 +11,9 @@ public class ModScreenHandlers {
     public static final ScreenHandlerType<ClassicCoffeeScreenHandler> COFFEE_SCREEN_HANDLER_SCREEN_HANDLER =
             Registry.register(Registries.SCREEN_HANDLER, new Identifier(OnCaffeine.MOD_ID, "classic_coffee"),
                     new ExtendedScreenHandlerType<>(ClassicCoffeeScreenHandler::new));
+    public static final ScreenHandlerType<ClassicTeaScreenHandler> CLASSIC_TEA_SCREEN_HANDLER =
+            Registry.register(Registries.SCREEN_HANDLER, new Identifier(OnCaffeine.MOD_ID, "classic_tea"),
+                    new ExtendedScreenHandlerType<>(ClassicTeaScreenHandler::new));
 
 
     public static void registerScreenHandler()

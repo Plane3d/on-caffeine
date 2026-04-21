@@ -38,7 +38,8 @@ public class ModBlocks {
 
     public static final Block CLASSIC_COFFEE_MACHINE = registerBlock("classic_coffee_machine",
             new ClassicCoffeeMachineBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
-
+    public static final Block CLASSIC_TEA_KETTLE = registerBlock("classic_tea_kettle",
+            new ClassicTeaKettleBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
 
     public static Block registerBlock(String name, Block block){
         registerBlockItem(name,block);
