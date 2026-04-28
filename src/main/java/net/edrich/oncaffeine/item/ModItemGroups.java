@@ -35,6 +35,8 @@ public class ModItemGroups {
         entries.add(ModBlocks.WILD_TEA);
 
         entries.add(ModBlocks.CLASSIC_COFFEE_MACHINE);
+        entries.add(ModBlocks.CLASSIC_TEA_KETTLE);
+        entries.add(ModBlocks.DRYING_TABLE);
 
     }).build());
     public static void registerItemGroups(){

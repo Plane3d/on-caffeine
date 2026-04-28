@@ -22,6 +22,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerSimpleState(ModBlocks.CLASSIC_COFFEE_MACHINE);
         blockStateModelGenerator.registerSimpleState(ModBlocks.CLASSIC_TEA_KETTLE);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.DRYING_TABLE);
     }
 
 

@@ -1,6 +1,6 @@
 package net.edrich.oncaffeine.screen;
 
-import net.edrich.oncaffeine.block.entity.ClassicTeaKettleBlockEntity;
+import net.edrich.oncaffeine.block.entity.DryingTableBlockEntity;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -12,28 +12,26 @@ import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 
-
-public class ClassicTeaScreenHandler extends ScreenHandler {
+public class DryingTableScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     private final PropertyDelegate propertyDelegate;
-    public final ClassicTeaKettleBlockEntity blockEntity;
+    public final DryingTableBlockEntity blockEntity;
 
-    public ClassicTeaScreenHandler(int syncId, PlayerInventory inventory, PacketByteBuf buf) {
+    public DryingTableScreenHandler(int syncId, PlayerInventory inventory, PacketByteBuf buf) {
         this(syncId, inventory, inventory.player.getWorld().getBlockEntity(buf.readBlockPos()),
-                new ArrayPropertyDelegate(3));
+                new ArrayPropertyDelegate(2));
 
     }
-    public ClassicTeaScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate){
-        super(ModScreenHandlers.CLASSIC_TEA_SCREEN_HANDLER, syncId);
+    public DryingTableScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate){
+        super(ModScreenHandlers.DRYING_TABLE_SCREEN_HANDLER, syncId);
         checkSize(((Inventory) blockEntity), 2);
         this.inventory = ((Inventory) blockEntity);
         playerInventory.onOpen(playerInventory.player);
         this.propertyDelegate = arrayPropertyDelegate;
-        this.blockEntity = ((ClassicTeaKettleBlockEntity) blockEntity);
+        this.blockEntity = ((DryingTableBlockEntity) blockEntity);
 
-        this.addSlot(new Slot(inventory, 0, 15, 9));
-        this.addSlot(new Slot(inventory, 1, 144, 9));
-        this.addSlot(new Slot(inventory, 2, 79, 59));
+        this.addSlot(new Slot(inventory, 0, 79, 9));
+        this.addSlot(new Slot(inventory, 1, 79, 59));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
