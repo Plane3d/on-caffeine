@@ -4,10 +4,9 @@ import net.edrich.oncaffeine.block.ModBlocks;
 import net.edrich.oncaffeine.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.TagKey;
+import net.minecraft.registry.tag.BlockTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -35,5 +34,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.WILD_COFFEE)
                 .add(ModBlocks.WILD_TEA)
                 .add(Blocks.AIR);
+        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(ModBlocks.CLASSIC_COFFEE_MACHINE)
+                .add(ModBlocks.CLASSIC_TEA_KETTLE)
+                .add(ModBlocks.DRYING_TABLE);
+        getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
+                .add(ModBlocks.CLASSIC_COFFEE_MACHINE)
+                .add(ModBlocks.CLASSIC_TEA_KETTLE)
+                .add(ModBlocks.DRYING_TABLE);
     }
 }

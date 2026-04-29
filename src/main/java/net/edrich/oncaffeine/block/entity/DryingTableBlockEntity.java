@@ -111,6 +111,10 @@ public class DryingTableBlockEntity extends BlockEntity implements ExtendedScree
                     this.resetProgress();
                 }
             }
+            else
+            {
+                this.resetProgress();
+            }
         }
         else
         {

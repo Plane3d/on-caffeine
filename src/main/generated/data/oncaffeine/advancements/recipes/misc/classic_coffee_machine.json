@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_coffee_fruit": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oncaffeine:coffee_fruit"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_iron_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_mug_empty": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oncaffeine:mug_empty"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:classic_coffee_machine"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_iron_ingot",
+      "has_mug_empty",
+      "has_coffee_fruit"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:classic_coffee_machine"
+    ]
+  },
+  "sends_telemetry_event": false
+}

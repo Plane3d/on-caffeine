@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "coffee",
+  "ingredient": {
+    "item": "oncaffeine:raw_coffee_beans"
+  },
+  "result": "oncaffeine:coffee_beans"
+}

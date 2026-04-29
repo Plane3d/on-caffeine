@@ -72,7 +72,7 @@ public class ClassicCoffeeMachineBlockEntity extends BlockEntity implements Exte
     {
         super.writeNbt(nbt);
         Inventories.writeNbt(nbt,inventory);
-        nbt.putInt("class_coffee_machine.progress", progress);//fix typos after tea kettle commit
+        nbt.putInt("classic_coffee_machine.progress", progress);
     }
 
     @Override
@@ -80,7 +80,7 @@ public class ClassicCoffeeMachineBlockEntity extends BlockEntity implements Exte
     {
         super.readNbt(nbt);
         Inventories.readNbt(nbt, inventory);
-        progress = nbt.getInt("class_coffee_machine.progress");//fix typos after tea kettle commit
+        progress = nbt.getInt("classic_coffee_machine.progress");
     }
 
 
@@ -108,7 +108,8 @@ public class ClassicCoffeeMachineBlockEntity extends BlockEntity implements Exte
 
         if(isOutputSlotEmptyOrReceivable())
         {
-            if(this.hasRecipe()){
+            if(this.hasRecipe())
+            {
                 this.increaseCraftProgress();
                 markDirty(world, pos, state);
 
@@ -116,6 +117,10 @@ public class ClassicCoffeeMachineBlockEntity extends BlockEntity implements Exte
                     this.craftItem();
                     this.resetProgress();
                 }
+            }
+            else
+            {
+                this.resetProgress();
             }
         }
         else

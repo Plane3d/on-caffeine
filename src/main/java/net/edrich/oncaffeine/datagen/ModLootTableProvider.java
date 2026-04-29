@@ -26,7 +26,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MUG_HOT_WATER);
         addDrop(ModBlocks.WILD_COFFEE, ModItems.COFFEE_FRUIT);
         addDrop(ModBlocks.WILD_TEA, ModItems.TEA_SEEDS);
+
         addDrop(ModBlocks.CLASSIC_COFFEE_MACHINE);
+        addDrop(ModBlocks.CLASSIC_TEA_KETTLE);
+        addDrop(ModBlocks.DRYING_TABLE);
 
         BlockStatePropertyLootCondition.Builder builderTea = BlockStatePropertyLootCondition
                 .builder(ModBlocks.TEA_CROP)

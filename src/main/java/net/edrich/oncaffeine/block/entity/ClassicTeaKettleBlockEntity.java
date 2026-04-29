@@ -113,6 +113,10 @@ public class ClassicTeaKettleBlockEntity extends BlockEntity implements Extended
                     this.resetProgress();
                 }
             }
+            else
+            {
+                this.resetProgress();
+            }
         }
         else
         {

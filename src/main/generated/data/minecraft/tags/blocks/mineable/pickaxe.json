@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "oncaffeine:classic_coffee_machine",
+    "oncaffeine:classic_tea_kettle",
+    "oncaffeine:drying_table"
+  ]
+}
