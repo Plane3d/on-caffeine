@@ -20,9 +20,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCrop(ModBlocks.TEA_CROP, TeaCropBlock.AGE, 0,1,2,3,4,5);
         blockStateModelGenerator.registerCrop(ModBlocks.COFFEE_CROP, CoffeeCropBlock.AGE, 0,1,2,3,4,5,6,7,8);
 
-        blockStateModelGenerator.registerSimpleState(ModBlocks.CLASSIC_COFFEE_MACHINE);
-        blockStateModelGenerator.registerSimpleState(ModBlocks.CLASSIC_TEA_KETTLE);
-        blockStateModelGenerator.registerSimpleState(ModBlocks.DRYING_TABLE);
+
     }
 
 

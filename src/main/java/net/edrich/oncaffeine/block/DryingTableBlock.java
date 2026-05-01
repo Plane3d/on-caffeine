@@ -2,10 +2,7 @@ package net.edrich.oncaffeine.block;
 
 import net.edrich.oncaffeine.block.entity.DryingTableBlockEntity;
 import net.edrich.oncaffeine.block.entity.ModBlockEntities;
-import net.minecraft.block.BlockRenderType;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.BlockWithEntity;
-import net.minecraft.block.ShapeContext;
+import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
@@ -29,7 +26,7 @@ public class DryingTableBlock extends BlockWithEntity {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return super.createCuboidShape(2.0, 0.0, 2.0, 14.0, 16.0, 14.0);
+        return Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 12.0, 16.0);
     }
 
     @Override

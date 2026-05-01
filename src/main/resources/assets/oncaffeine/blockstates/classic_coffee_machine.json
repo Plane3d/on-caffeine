@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "oncaffeine:block/classic_coffee_machine"
+    }
+  }
+}
