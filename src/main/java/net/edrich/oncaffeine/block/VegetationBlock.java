@@ -9,9 +9,9 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldView;
 
-public class FoliageBlock extends Block {
+public class VegetationBlock extends Block {
 
-    public FoliageBlock(Settings settings) {
+    public VegetationBlock(Settings settings) {
         super(settings);
     }
 
