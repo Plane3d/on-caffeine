@@ -19,14 +19,15 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> WILD_COFFEE_PLACED_KEY = registerKey("wild_coffee_placed");
+    public static final RegistryKey<PlacedFeature> WILD_TEA_PLACED_KEY = registerKey("wild_tea_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         RegistryEntryLookup<ConfiguredFeature<?, ?>> configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
         RegistryEntry<ConfiguredFeature<?, ?>> coffeeRegistryEntry = configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WILD_COFFEE_KEY);
+        RegistryEntry<ConfiguredFeature<?, ?>> teaRegistryEntry = configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WILD_TEA_KEY);
 
-        register(context, WILD_COFFEE_PLACED_KEY, coffeeRegistryEntry, ModPlacedFeatures.modifiers((int)(Math.random() * 8) + 5));
-
-
+        register(context, WILD_COFFEE_PLACED_KEY, coffeeRegistryEntry, ModPlacedFeatures.modifiers((int)(Math.random() * 3) + 5));
+        register(context, WILD_TEA_PLACED_KEY, teaRegistryEntry, ModPlacedFeatures.modifiers((int)(Math.random() * 3) + 5));
 
     }
 

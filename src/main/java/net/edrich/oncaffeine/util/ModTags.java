@@ -12,6 +12,7 @@ public class ModTags {
     {
         public static final TagKey<Block> CUP_BLOCKS_UNPLACEABLE = createTag("cup_blocks_unplaceable");
         public static final TagKey<Block> CAFFEINE_FOLIAGE = createTag("caffeine_foliage");
+
         private static TagKey<Block> createTag(String name)
         {
             return TagKey.of(RegistryKeys.BLOCK, new Identifier(OnCaffeine.MOD_ID, name));
