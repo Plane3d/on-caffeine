@@ -50,6 +50,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModBlocks.MUG_EMPTY), conditionsFromItem(ModBlocks.MUG_EMPTY))
                 .criterion(hasItem(ModItems.TEA_SEEDS), conditionsFromItem(ModItems.TEA_SEEDS))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CLASSIC_TEA_KETTLE)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.DRYING_TABLE, 1)
                 .pattern("SIS")
                 .pattern("S S")
@@ -59,6 +60,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.COFFEE_FRUIT), conditionsFromItem(ModItems.COFFEE_FRUIT))
                 .criterion(hasItem(ModItems.TEA_LEAVES), conditionsFromItem(ModItems.TEA_LEAVES))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.DRYING_TABLE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MUG_EMPTY, 2)
+                .pattern("B B")
+                .pattern("BBB")
+                .input('B', Items.BRICK)
+                .criterion(hasItem(Items.BRICK), conditionsFromItem(Items.BRICK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.MUG_EMPTY)));
 
 
 
