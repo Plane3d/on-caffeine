@@ -45,7 +45,7 @@ public class DryingTableBlock extends BlockWithEntity {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof DryingTableBlockEntity)
             {
-                ItemScatterer.spawn(world, pos, (DryingTableBlockEntity)blockEntity);//replace
+                ItemScatterer.spawn(world, pos, (DryingTableBlockEntity)blockEntity);
                 world.updateComparators(pos, this);
             }
             super.onStateReplaced(state, world, pos, newState, moved);

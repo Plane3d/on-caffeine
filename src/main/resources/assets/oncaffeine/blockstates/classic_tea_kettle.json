@@ -1,7 +1,28 @@
 {
   "variants": {
-    "": {
+    "facing=east": {
       "model": "oncaffeine:block/classic_tea_kettle"
+    },
+    "facing=west": {
+      "model": "oncaffeine:block/classic_tea_kettle",
+      "y": 180
+    },
+    "facing=north": {
+      "model": "oncaffeine:block/classic_tea_kettle",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "oncaffeine:block/classic_tea_kettle",
+      "y": 90
+
+    },
+    "facing=up": {
+      "model": "oncaffeine:block/classic_tea_kettle"
+
+    },
+    "facing=down": {
+      "model": "oncaffeine:block/classic_tea_kettle"
+
     }
   }
 }
