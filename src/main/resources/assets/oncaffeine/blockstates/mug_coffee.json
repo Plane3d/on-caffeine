@@ -1,6 +1,24 @@
 {
   "variants": {
-    "": {
+    "facing=east": {
+      "model": "oncaffeine:block/mug_coffee",
+      "y": 180
+    },
+    "facing=north": {
+      "model": "oncaffeine:block/mug_coffee",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "oncaffeine:block/mug_coffee",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "oncaffeine:block/mug_coffee"
+    },
+    "facing=up": {
+      "model": "oncaffeine:block/mug_coffee"
+    },
+    "facing=down": {
       "model": "oncaffeine:block/mug_coffee"
     }
   }

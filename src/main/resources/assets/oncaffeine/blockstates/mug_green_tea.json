@@ -1,6 +1,24 @@
 {
   "variants": {
-    "": {
+    "facing=east": {
+      "model": "oncaffeine:block/mug_green_tea",
+      "y": 180
+    },
+    "facing=north": {
+      "model": "oncaffeine:block/mug_green_tea",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "oncaffeine:block/mug_green_tea",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "oncaffeine:block/mug_green_tea"
+    },
+    "facing=up": {
+      "model": "oncaffeine:block/mug_green_tea"
+    },
+    "facing=down": {
       "model": "oncaffeine:block/mug_green_tea"
     }
   }
