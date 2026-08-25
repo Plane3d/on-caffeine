@@ -8,9 +8,9 @@ import net.minecraft.item.ItemUsageContext;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
-
 
 
 public class BrewableItem extends Item {
@@ -46,7 +46,8 @@ public class BrewableItem extends Item {
 
     private static void convertCup(BlockState blockState, ItemUsageContext context, BlockPos position)
     {
-        context.getWorld().setBlockState(position, blockState);
+        context.getWorld().setBlockState(position, blockState.with(Properties.FACING, context.getHorizontalPlayerFacing().getOpposite()));
+
         context.getWorld().playSound((PlayerEntity)null, position, SoundEvents.BLOCK_FIRE_EXTINGUISH,
                 SoundCategory.BLOCKS, 1.0F,
                 (1.0F + context.getWorld().getRandom().nextFloat() * 0.2F) * 0.7F);

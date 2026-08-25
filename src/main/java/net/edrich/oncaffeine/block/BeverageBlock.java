@@ -40,4 +40,5 @@ public class BeverageBlock extends Block {
     public BlockState getPlacementState(ItemPlacementContext context) {
         return Objects.requireNonNull(super.getPlacementState(context)).with(Properties.FACING, context.getHorizontalPlayerFacing().getOpposite());
     }
+
 }

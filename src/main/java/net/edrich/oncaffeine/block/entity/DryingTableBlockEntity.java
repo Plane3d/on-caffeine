@@ -130,14 +130,14 @@ public class DryingTableBlockEntity extends BlockEntity implements ExtendedScree
 
     private void craftItem()
     {
-        this.removeStack(INPUT_SLOT, 1);
+
         ItemStack result = switch (this.checkRecipe()) {
             case "green_tea_recipe" -> new ItemStack(ModItems.GREEN_TEA_LEAVES);
             case "black_tea_recipe" -> new ItemStack(ModItems.BLACK_TEA_LEAVES);
             case "raw_coffee_recipe" -> new ItemStack(ModItems.RAW_COFFEE_BEANS);
             default -> new ItemStack(Items.GRASS);
         };
-
+        this.removeStack(INPUT_SLOT, 1);
         this.setStack(OUTPUT_SLOT, new ItemStack(result.getItem(), getStack(OUTPUT_SLOT).getCount() + result.getCount()));
     }
 
