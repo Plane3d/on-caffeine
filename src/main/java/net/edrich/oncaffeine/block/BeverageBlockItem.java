@@ -9,7 +9,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
 public class BeverageBlockItem extends BlockItem {
