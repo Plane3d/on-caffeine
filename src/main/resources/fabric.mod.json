@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "oncaffeine",
-	"version": "${0.0.33}",
+	"version": "0.0.33",
 	"name": "On Caffeine",
 	"description": "Bringing caffeinated drinks of all types and temperatures(soon)!",
 	"authors": [
