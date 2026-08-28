@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "oncaffeine",
-	"version": "${version}",
+	"version": "0.0.36",
 	"name": "On Caffeine",
 	"description": "Bringing caffeinated drinks of all types and temperatures!",
 	"authors": [
@@ -31,7 +31,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.17.0",
-		"minecraft": "~1.20.1",
+		"minecraft": "1.20.4",
 		"java": ">=17",
 		"fabric-api": "*"
 	}

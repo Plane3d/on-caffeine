@@ -135,7 +135,7 @@ public class DryingTableBlockEntity extends BlockEntity implements ExtendedScree
             case "green_tea_recipe" -> new ItemStack(ModItems.GREEN_TEA_LEAVES);
             case "black_tea_recipe" -> new ItemStack(ModItems.BLACK_TEA_LEAVES);
             case "raw_coffee_recipe" -> new ItemStack(ModItems.RAW_COFFEE_BEANS);
-            default -> new ItemStack(Items.GRASS);
+            default -> new ItemStack(Items.SHORT_GRASS);
         };
         this.removeStack(INPUT_SLOT, 1);
         this.setStack(OUTPUT_SLOT, new ItemStack(result.getItem(), getStack(OUTPUT_SLOT).getCount() + result.getCount()));

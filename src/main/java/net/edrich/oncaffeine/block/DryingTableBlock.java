@@ -1,5 +1,6 @@
 package net.edrich.oncaffeine.block;
 
+import com.mojang.serialization.MapCodec;
 import net.edrich.oncaffeine.block.entity.DryingTableBlockEntity;
 import net.edrich.oncaffeine.block.entity.ModBlockEntities;
 import net.minecraft.block.*;
@@ -22,6 +23,11 @@ public class DryingTableBlock extends BlockWithEntity {
 
     protected DryingTableBlock(Settings settings) {
         super(settings);
+    }
+
+    @Override
+    protected MapCodec<? extends BlockWithEntity> getCodec() {
+        return null;
     }
 
     @Override

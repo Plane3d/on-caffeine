@@ -1,5 +1,6 @@
 package net.edrich.oncaffeine.block;
 
+import com.mojang.serialization.MapCodec;
 import net.edrich.oncaffeine.block.entity.ClassicCoffeeMachineBlockEntity;
 import net.edrich.oncaffeine.block.entity.ModBlockEntities;
 import net.minecraft.block.*;
@@ -28,6 +29,11 @@ public class ClassicCoffeeMachineBlock extends BlockWithEntity implements BlockE
 
     public ClassicCoffeeMachineBlock(Settings settings) {
         super(settings);
+    }
+
+    @Override
+    protected MapCodec<? extends BlockWithEntity> getCodec() {
+        return null;
     }
 
     @Override
