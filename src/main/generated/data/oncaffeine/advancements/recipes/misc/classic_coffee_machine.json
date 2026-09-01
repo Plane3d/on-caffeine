@@ -56,6 +56,5 @@
     "recipes": [
       "minecraft:classic_coffee_machine"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

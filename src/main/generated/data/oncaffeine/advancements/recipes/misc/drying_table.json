@@ -56,6 +56,5 @@
     "recipes": [
       "minecraft:drying_table"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

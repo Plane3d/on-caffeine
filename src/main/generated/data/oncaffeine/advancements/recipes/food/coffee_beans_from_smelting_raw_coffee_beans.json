@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:coffee_beans_from_smelting_raw_coffee_beans"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

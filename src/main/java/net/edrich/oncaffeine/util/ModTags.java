@@ -21,6 +21,8 @@ public class ModTags {
 
     public static class Items
     {
+        public static final TagKey<Item> HERBAL_TEA_CRAFTABLE = createTag("herbal_tea_craftable");
+
         private static TagKey<Item> createTag(String name)
         {
             return TagKey.of(RegistryKeys.ITEM, new Identifier(OnCaffeine.MOD_ID, name));

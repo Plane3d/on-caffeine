@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:mug_empty"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

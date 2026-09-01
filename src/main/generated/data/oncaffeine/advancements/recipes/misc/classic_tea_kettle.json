@@ -56,6 +56,5 @@
     "recipes": [
       "minecraft:classic_tea_kettle"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

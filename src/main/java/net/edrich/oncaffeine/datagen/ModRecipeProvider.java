@@ -2,14 +2,18 @@ package net.edrich.oncaffeine.datagen;
 
 import net.edrich.oncaffeine.block.ModBlocks;
 import net.edrich.oncaffeine.item.ModItems;
+import net.edrich.oncaffeine.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.ShapelessRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
@@ -25,6 +29,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerSmelting(exporter, COFFEE_ROASTABLE, RecipeCategory.FOOD,
                 ModItems.COFFEE_BEANS, 0.7f,
                 200, "coffee");
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CLASSIC_COFFEE_MACHINE, 1)
                 .pattern("ISI")
                 .pattern("GSG")
@@ -66,6 +71,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('B', Items.BRICK)
                 .criterion(hasItem(Items.BRICK), conditionsFromItem(Items.BRICK))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.MUG_EMPTY)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BLENDED_HERBS, 1)
+                .input(ModTags.Items.HERBAL_TEA_CRAFTABLE)
+                .input(ModTags.Items.HERBAL_TEA_CRAFTABLE)
+                .input(ModTags.Items.HERBAL_TEA_CRAFTABLE)
+                .criterion(hasItem(Items.DANDELION), conditionsFromItem(Items.DANDELION))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.BLENDED_HERBS)));
 
 
 
