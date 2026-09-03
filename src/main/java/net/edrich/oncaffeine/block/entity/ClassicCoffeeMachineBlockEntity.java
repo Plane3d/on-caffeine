@@ -180,5 +180,4 @@ public class ClassicCoffeeMachineBlockEntity extends BlockEntity implements Exte
     {
         return this.getStack(OUTPUT_SLOT).isEmpty() || this.getStack(OUTPUT_SLOT).getCount() < this.getStack(OUTPUT_SLOT).getMaxCount();
     }
-
 }

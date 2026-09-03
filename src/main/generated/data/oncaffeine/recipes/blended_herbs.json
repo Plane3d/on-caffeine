@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "oncaffeine:herbal_tea_craftable"
+    },
+    {
+      "tag": "oncaffeine:herbal_tea_craftable"
+    },
+    {
+      "tag": "oncaffeine:herbal_tea_craftable"
+    }
+  ],
+  "result": {
+    "item": "oncaffeine:blended_herbs"
+  }
+}
